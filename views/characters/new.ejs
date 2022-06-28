@@ -3,9 +3,12 @@
 <%- include('../partials/nav.ejs') %>
 
 
-<main>
+<section>
   <h1><%= title %></h1>
-    <form id="new-form" action="/character" method="POST">
+  <% if (user) { %>
+    <h2>Add Character</h2>
+   
+    <form id="new-form" action="/characters/new" method="POST">
       <label for="name-input">Name:</label>
       <input type="text" name="name" id="name-input">
       <label for="birthday-input">Birthday:</label>
@@ -16,8 +19,7 @@
       <input type="text" name="bookOrigin" id="book-origin-input">
       <label for="death-status-checkbox">Deceased:</label>
       <input type="checkbox" name="deathStatus" id="death-status-input" checked>
-      <button type="submit">+ Character</button>
-
+      <br>
     <label for="eye-color-input">Eye color:</label>
     <select name="eyeColor" id="eye-color-select">
       <option value="Green">Green</option>
@@ -39,10 +41,10 @@
       <option value="Strawberry">Strawberry</option>
       <option value="Honey">Honey</option>
     </select>
-
+    <% } %>
     <button type="submit">+ Character</button>
   </form>
     
-  </main>
+</section>
 
   <%- include('../partials/footer.ejs') %>

@@ -1,0 +1,14 @@
+<%- include('../partials/html-head.ejs') %>
+<%- include('../partials/nav.ejs') %>
+
+<section> 
+	<h1>Your Characters</h1>
+	<ul>
+	<% characters.forEach(character => { %>
+		<li>👤 <%= character.name %> is <%= character.deathStatus ? 'Dead' : 'Alive' %></li>
+	<% }) %>
+	</ul>
+</section>
+
+
+<%- include('../partials/footer.ejs') %>

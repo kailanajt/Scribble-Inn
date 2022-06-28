@@ -5,10 +5,18 @@
 <body>
   <nav>
     <a 
-      href="/character/new" <%- title === 'Add Character' ? 'class="active"' : '' %>
+    href="/characters" <%- title === 'Your Characters' ? 'class="active"' : '' %>
+  >
+    Your Characters
+  </a>
+
+    <a 
+      href="/characters/new" <%- title === 'Add Character' ? 'class="active"' : '' %>
     >
       + Character
     </a>
+
+ 
     
     <% if (user) { %>
       <a href="/auth/logout">
