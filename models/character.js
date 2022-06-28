@@ -6,7 +6,8 @@ const characterSchema = new Schema({
 name: String,
 age: Number,
 birthday: Date,
-deceased: {
+bookOrigin: String,
+deathStatus: {
 	type: Boolean,
 },
 hairColor:{
@@ -18,7 +19,7 @@ hairTexture: {
 	enum: ['Coarse', 'Coils', 'Curly', 'Straight', 'Wavy', 'Locs', 'Braids', 'Wringlets']
 },
 hairLength: {
-	typr: String,
+	type: String,
 	enum: ['Shoulder Length', 'Bob Length', 'Afro Length', 'Waist Length', 'Hips Length']
 },
 height: Number,
@@ -28,7 +29,9 @@ eyeColor: {
 },
 skinColor: {
 	type: String,
-}
+},
+
+owner: {type: Schema.Types.ObjectId, ref: 'Profile'}
 
 }, {
 	timestamps: true
