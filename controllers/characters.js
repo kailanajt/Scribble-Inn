@@ -1,26 +1,21 @@
 import { Character } from '../models/character.js'
 
-function newCharacter(req, res) {
-// console.log("this works!")
-res.render("character/new", {
-	title: "Add Character",
-	})
-}
-
-function create (req, res) {
-	//deathStatus checkbox to boolean:
-	req.body.deathStatus = !!req.body.deathStatus
-	Character.create(req.body)
-	.then(character => {
-		res.redirect ('/characters/new')
-	})
-	.catch(err => {
-    res.redirect('/characters')
-  })
-}
+	function index (req, res) {
+		Character.find({})
+		.then(characters => {
+			// console.log('characters')
+			res.render('characters/index', {
+				characters, //characters: characters,
+				title: "Your Characters"
+			})
+		})
+		.catch(err => {
+			console.log(err)
+			res.redirect("/")
+		})
+	}
+	
 
 export {
-newCharacter as new,
-create
-
+	index,
 }

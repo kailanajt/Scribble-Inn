@@ -2,7 +2,6 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <!-- <h1>Welcome Back, <%= user ? user.profile.name : "friend" %></h1> -->
   <h1>The Scribble-Inn</h1>
   <% if (user?.profile.avatar) { %>
     <div>
@@ -12,6 +11,18 @@
       />
     </div>
   <% } %>
+
+  <a 
+    href="/characters" <%- title === 'Your Characters' ? 'class="active"' : '' %>
+  >
+    Your Characters
+  </a>
+<br>
+  <a 
+    href="/books" <%- title === 'Your Books' ? 'class="active"' : '' %>
+  >
+    Your Books
+  </a>
 </main>
 
 <%- include('./partials/footer') %>
