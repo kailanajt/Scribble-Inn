@@ -17,7 +17,8 @@ function index (req, res) {
 }
 
 function newCharacter(req, res) {
-	console.log('please freaking work')
+	// console.log('please freaking work')
+	res.render("characters/new")
 }
 
 // function create(req, res) {
