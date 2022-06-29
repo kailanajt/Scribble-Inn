@@ -13,8 +13,17 @@ router.get('/new', isLoggedIn, charactersCtrl.new)
 //GET localhost:3000/characters/:id
 router.get('/:id', isLoggedIn, charactersCtrl.show)
 
+// GET localhost:3000/characters/:id/edit
+router.get('/:id/edit', charactersCtrl.edit)
+
 // POST localhost:3000/characters
 router.post('/', isLoggedIn, charactersCtrl.create)
+
+// DELETE localhost:3000/characters/:id
+router.delete("/:id", charactersCtrl.delete)
+
+//PUT localhost:3000/movies/:id
+router.put("/:id", charactersCtrl.update)
 
 
 export {

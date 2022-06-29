@@ -12,7 +12,7 @@ deathStatus: {
 },
 hairColor:{
 	type: String,
-	enum: ['Blonde', 'Black', 'Brown', 'Sandy Blonde', 'Strawberry', 'Honey', 'Raven', 'White', 'Red', 'Green', 'Purple']
+	enum: ['Blonde', 'Black', 'Brown', 'Sandy Blonde', 'Strawberry', 'Honey', 'Raven', 'White', 'Silver', 'Red', 'Green', 'Purple']
 },
 hairTexture: {
 	type: String, 

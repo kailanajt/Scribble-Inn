@@ -1,0 +1,69 @@
+<%- include('../partials/html-head.ejs') %>
+<!-- <link rel="stylesheet" href="/stylesheets/characters/new.css" /> -->
+<%- include('../partials/nav.ejs') %>
+<main>
+	<h1><%= title %></h1>
+	<table>
+	<thead>
+					<tr>
+			<th>Name</th>
+			<th>Book Origin</th>
+			<th>Age</th>
+			<th>Birthday</th>
+							<th>Deaceased</th>
+			</thead>
+	<tbody>
+			<tr>
+					<td><%= character.name %></td>
+					<td><%= character.bookOrigin %></td>
+					<td><%= character.age %></td>
+					<td><%= character.birhday %></td>
+					<td><%= character.deathStatus %> </td>
+
+			</tr>
+
+	</tbody>
+</table>
+	<section>
+			<h1><%= character.name %>'s Appearance</h1>
+			<table>
+					<thead>
+							<tr>
+									<th>Eye Color</th>
+									<th>Height</th>
+									<th>Skin Color</th>
+									<th>Hair Length</th>
+									<th>Hair Color</th>
+									<th>Hair Texture</th>
+									<th>Quick Note</th>
+
+					</thead>
+			<tbody>
+					<tr>
+							<td><%= character.eyeColor %></td>
+							<td><%= character.height %></td>
+							<td><%= character.skinColor %></td>
+							<td><%= character.hairLength %></td>
+							<td><%= character.hairColor %></td>
+							<td><%= character.hairTexture %></td>
+							<td><%= character.toNote %></td>
+							<td>
+						
+								</form>
+							</td>
+					</tr>
+			
+			</tbody>
+		</table>
+		<a href="/characters/<%= character._id %>/edit ">
+			<button>Edit Character</button>
+		</a>
+		<form action="/characters/<%= character._id %>?_method=DELETE"
+			method="POST">
+			<button type="submit">Delete Character</button>
+
+		</form>
+	</section>
+</main>
+
+<%- include('../partials/footer.ejs') %>

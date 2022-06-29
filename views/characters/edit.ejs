@@ -1,0 +1,77 @@
+<%- include('../partials/html-head.ejs') %>
+<!-- <link rel="stylesheet" href="/stylesheets/characters/new.css" /> -->
+<%- include('../partials/nav.ejs') %>
+<section>
+    <h1><%= title %></h1>
+    <% if (user) { %>
+     
+      <form id="new-form" action="/characters/<%= character._id %>?_method=PUT" method="POST">
+        <label for="name-input">Name:</label>
+        <input type="text" name="name" value="<%= character.name %>" id="name-input">
+        <label for="birthday-input">Birthday:</label>
+        <input type="date" name="birthday" value="<%= character.birthday %>" id="birthday-input">
+        <label for="age-input">Current Age:</label>
+        <input type="text" name="age" value="<%= character.age %>" id="age-input">
+        <label for="book-origin-input">Book Origin:</label>
+        <input type="text" name="bookOrigin" value="<%= character.bookOrigin %>" id="book-origin-input">
+        <label for="death-status-checkbox">Deceased:</label>
+        <input type="checkbox" name="deathStatus" value="<%= character.deathStatus %>" id="death-status-input" unchecked>
+        <br>
+        <label for="height-input">Height:</label>
+        <input type="text" name="height" value="<%= character.height %>" id="height-input">
+        <label for="skin-color-input">Skin Color:</label>
+        <input type="text" name="skinColor" value="<%= character.skinColor %>" id="skin-color-input">
+      <label for="eye-color-input">Eye color:</label>
+      <select name="eyeColor" value="<%= character.eyeColor %>" id="eye-color-select">
+        <option value="Green">Green</option>
+        <option value="Blue">blue</option>
+        <option value="Hazel">Hazel</option>
+        <option value="Gray">Gray</option>
+        <option value="Brown">Brown</option>
+        <option value="Amber">Amber</option>
+      </select>
+      <label for="hair-color-input">Hair color:</label>
+      <select name="hairColor" value="<%= character.hairColor %>" id="hair-color-select">
+        <option value="Blonde">Blonde</option>
+        <option value="Black">Black</option>
+        <option value="Brown">Brown</option>
+        <option value="Sandy-Blonde">Sandy Blonde</option>
+        <option value="Strawberry">Strawberry</option>
+        <option value="Honey">Honey</option>
+        <option value="Raven">Raven</option>
+        <option value="White">White</option>
+        <option value="Silver">Silver</option>
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="Purple">Purple</option>
+        
+      </select>
+      <label for="hair-length-input">Hair Length:</label>
+      <select name="hairLength" value="<%= character.hairLength %>" id="hair-length-select">
+        <option value="Shoulder">Shoulder Length</option>
+        <option value="Bob">Bob Length</option>
+        <option value="Afro">Afro Length</option>
+        <option value="Waist">Waist Length</option>
+        <option value="Hips">Hip Length</option>
+      </select>
+      <label for="hair-texture-input">Hair Texture:</label>
+      <select name="hairTexture" value="<%= character.hairTexture %>" id="hair-texture-select">
+        <option value="Coarse">Coarse</option>
+        <option value="Coils">Coils</option>
+        <option value="Curly">Curly</option>
+        <option value="Straight">Straight</option>
+        <option value="Wavy">Wavy</option>
+        <option value="Locs">Locs</option>
+        <option value="Braids">Braids</option>
+        <option value="Wringlets">Wringlets</option>
+      </select>
+  <br>
+      <label for="to-note-input">Quick Note:</label>
+        <input type="text" name="toNote" value="<%= character.toNote %>" id="to-note-input">
+      <% } %>
+      <button type="submit">Save</button>
+    </form>
+      
+  </section>
+  
+<%- include('../partials/footer.ejs') %>
