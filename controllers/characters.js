@@ -24,7 +24,7 @@ function newCharacter(req, res) {
 }
 
 function create(req, res) {
-	console.log('please fucken work')
+	console.log('please freaking work')
 	console.log("FORM DATA:", req.body)
 	// req.body.owner = req.user.profile._id
 	// req.body.deathStatus = !!req.body.deathStatus
