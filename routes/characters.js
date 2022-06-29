@@ -11,7 +11,7 @@ router.get('/', charactersCtrl.index)
 router.get('/new', isLoggedIn, charactersCtrl.new)
 
 // POST localhost:3000/characters
-// router.post('/characters', isLoggedIn, charactersCtrl.create)
+router.post('/', isLoggedIn, charactersCtrl.create)
 
 export {
 	router

@@ -7,7 +7,7 @@
   <h1><%= title %></h1>
   <% if (user) { %>
    
-    <form id="new-form" action="/characters/new" method="POST">
+    <form id="new-form" action="/characters" method="POST">
       <label for="name-input">Name:</label>
       <input type="text" name="name" id="name-input">
       <label for="birthday-input">Birthday:</label>
@@ -17,8 +17,12 @@
       <label for="book-origin-input">Book Origin:</label>
       <input type="text" name="bookOrigin" id="book-origin-input">
       <label for="death-status-checkbox">Deceased:</label>
-      <input type="checkbox" name="deathStatus" id="death-status-input" checked>
+      <input type="checkbox" name="deathStatus" id="death-status-input" unchecked>
       <br>
+      <label for="height-input">Height:</label>
+      <input type="text" name="height" id="height-input">
+      <label for="skin-color-input">Skin Color:</label>
+      <input type="text" name="skinColor" id="skin-color-input">
     <label for="eye-color-input">Eye color:</label>
     <select name="eyeColor" id="eye-color-select">
       <option value="Green">Green</option>
@@ -40,6 +44,28 @@
       <option value="Strawberry">Strawberry</option>
       <option value="Honey">Honey</option>
     </select>
+    <label for="hair-length-input">Hair Length:</label>
+    <select name="hairLength" id="hair-length-select">
+      <option value="Shoulder">Shoulder Length</option>
+      <option value="Bob">Bob Length</option>
+      <option value="Afro">Afro Length</option>
+      <option value="Waist">Waist Length</option>
+      <option value="Hips">Hip Length</option>
+    </select>
+    <label for="hair-texture-input">Hair Texture:</label>
+    <select name="hairTexture" id="hair-texture-select">
+      <option value="Coarse">Coarse</option>
+      <option value="Coils">Coils</option>
+      <option value="Curly">Curly</option>
+      <option value="Straight">Straight</option>
+      <option value="Wavy">Wavy</option>
+      <option value="Locs">Locs</option>
+      <option value="Braids">Braids</option>
+      <option value="Wringlets">Wringlets</option>
+    </select>
+<br>
+    <label for="to-note-input">Quick Note:</label>
+      <input type="text" name="toNote" id="to-note-input">
     <% } %>
     <button type="submit">+ Character</button>
   </form>

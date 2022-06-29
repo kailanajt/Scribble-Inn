@@ -5,7 +5,7 @@
 	<h1>Your Characters</h1>
 	<ul>
 	<% characters.forEach(character => { %>
-		<li>👤 <%= character.name %> is <%= character.deathStatus ? 'Dead' : 'Alive' %></li>
+		<li>👤 <%= character.name %> is <%= character.deathStatus ? 'is dead' : 'is alive' %></li>
 	<% }) %>
 	</ul>
 </section>

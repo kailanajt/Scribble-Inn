@@ -23,18 +23,20 @@ function newCharacter(req, res) {
 	})
 }
 
-// function create(req, res) {
-// 	req.body.owner = req.user.profile._id
-// 	req.body.deathStatus = !!req.body.deathStatus
-// 	Character.create(req.body)
-// 	.then(character => {
-// 		res.redirect('/characters')
-// 	})
-// 	.catch(err => {
-// 		console.log(err)
-// 		res.redirect("/")
-// 	})
-// }
+function create(req, res) {
+	console.log('please fucken work')
+	console.log("FORM DATA:", req.body)
+	// req.body.owner = req.user.profile._id
+	// req.body.deathStatus = !!req.body.deathStatus
+	// Character.create(req.body)
+	// .then(character => {
+	// 	res.redirect('/characters')
+	// })
+	// .catch(err => {
+	// 	console.log(err)
+	// 	res.redirect("/")
+	// })
+}
 
 
 	
@@ -42,5 +44,5 @@ function newCharacter(req, res) {
 export {
 	index,
 	newCharacter as new,
-	// create,
+	create,
 }

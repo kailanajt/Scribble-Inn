@@ -20,7 +20,7 @@ hairTexture: {
 },
 hairLength: {
 	type: String,
-	enum: ['Shoulder Length', 'Bob Length', 'Afro Length', 'Waist Length', 'Hips Length']
+	enum: ['Shoulder', 'Bob', 'Afro', 'Waist', 'Hips']
 },
 height: Number,
 eyeColor: {
@@ -29,6 +29,9 @@ eyeColor: {
 },
 skinColor: {
 	type: String,
+},
+toNote: {
+	type: String
 },
 owner: {type: Schema.Types.ObjectId, ref: 'Profile'},
 }, {
