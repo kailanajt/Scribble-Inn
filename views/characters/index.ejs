@@ -3,11 +3,27 @@
 
 <section> 
 	<h1>Your Characters</h1>
-	<ul>
-	<% characters.forEach(character => { %>
-		<li>👤 <%= character.name %> is <%= character.deathStatus ? 'dead' : 'alive' %></li>
-	<% }) %>
-	</ul>
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Book Origin</th>
+				<th>Quick Note</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% characters.forEach(character => { %>
+				<tr>
+					<td> 👤 <%=  character.name %> </td>
+					<td><%=  character.bookOrigin %> </td>
+					<td><%=  character.toNote %> </td>
+					<td><a href="/characters/<%=character._id %>">Details</a></td>
+				</tr>
+				<!-- <li>👤 <%= character.name %> is <%= character.deathStatus ? 'dead' : 'alive' %></li> -->
+			<% }) %>
+		</tbody>
+	</table>
 </section>
 
 

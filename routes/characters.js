@@ -10,8 +10,12 @@ router.get('/', charactersCtrl.index)
 // GET localhost:3000/characters/new
 router.get('/new', isLoggedIn, charactersCtrl.new)
 
+//GET localhost:3000/characters/:id
+router.get('/:id', isLoggedIn, charactersCtrl.show)
+
 // POST localhost:3000/characters
 router.post('/', isLoggedIn, charactersCtrl.create)
+
 
 export {
 	router

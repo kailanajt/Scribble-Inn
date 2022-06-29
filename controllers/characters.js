@@ -30,8 +30,8 @@ function create(req, res) {
 	req.body.deathStatus = !!req.body.deathStatus
 	Character.create(req.body)
 	.then(character => {
-		console.log(character)
-		res.redirect("/characters/new")
+		// console.log(character)
+		res.redirect("/characters")
 	})
 	.catch(err => {
 		console.log(err)
