@@ -24,18 +24,19 @@ function newCharacter(req, res) {
 }
 
 function create(req, res) {
-	console.log('please freaking work')
-	console.log("FORM DATA:", req.body)
+	// console.log('please freaking work')
+	// console.log("FORM DATA:", req.body)
 	// req.body.owner = req.user.profile._id
-	// req.body.deathStatus = !!req.body.deathStatus
-	// Character.create(req.body)
-	// .then(character => {
-	// 	res.redirect('/characters')
-	// })
-	// .catch(err => {
-	// 	console.log(err)
-	// 	res.redirect("/")
-	// })
+	req.body.deathStatus = !!req.body.deathStatus
+	Character.create(req.body)
+	.then(character => {
+		console.log(character)
+		res.redirect("/characters/new")
+	})
+	.catch(err => {
+		console.log(err)
+		res.redirect("/")
+	})
 }
 
 

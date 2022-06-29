@@ -22,7 +22,7 @@ hairLength: {
 	type: String,
 	enum: ['Shoulder', 'Bob', 'Afro', 'Waist', 'Hips']
 },
-height: Number,
+height: String,
 eyeColor: {
 	type: String, 
 	enum: ['Brown', 'Green', 'Blue', 'Hazel', 'Gray', 'Amber',]
