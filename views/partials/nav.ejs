@@ -5,6 +5,10 @@
 </head>
 <body>
   <nav>
+    <a href="/" id="homeBtn">
+      <button>🏠</button>
+    </a>
+    
     <a class="nav-link nav-char"
     href="/characters" <%- title === 'Your Characters' ? 'class="active"' : '' %>
   >
@@ -29,9 +33,6 @@
     Your Books
   </a>
 
-  <a href="/" id="homeBtn">
-    <button>🏠</button>
-  </a>
   <% if (user) { %>
     <a href="/auth/logout" id="logout">
       <button type="submit">Logout</button>
