@@ -4,6 +4,9 @@
 </head>
 <body>
   <nav>
+    <a href="/">
+      <button>🏠</button>
+    </a>
     <a 
     href="/characters" <%- title === 'Your Characters' ? 'class="active"' : '' %>
   >
@@ -31,7 +34,13 @@
     <% } %>
 
     <a 
-    href="/book/new" <%- title === 'Add Book' ? 'class="active"' : '' %>
+    href="/books" <%- title === 'Your Books' ? 'class="active"' : '' %>
+  >
+    Your Books
+  </a>
+
+    <a 
+    href="/books/new" <%- title === 'Add Book' ? 'class="active"' : '' %>
   >
     + Book
   </a>

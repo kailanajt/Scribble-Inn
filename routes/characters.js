@@ -20,10 +20,10 @@ router.get('/:id/edit', charactersCtrl.edit)
 router.post('/', isLoggedIn, charactersCtrl.create)
 
 // DELETE localhost:3000/characters/:id
-router.delete("/:id", charactersCtrl.delete)
+router.delete("/:id", isLoggedIn, charactersCtrl.delete)
 
 //PUT localhost:3000/movies/:id
-router.put("/:id", charactersCtrl.update)
+router.put("/:id", isLoggedIn, charactersCtrl.update)
 
 
 export {

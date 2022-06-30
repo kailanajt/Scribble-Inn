@@ -26,8 +26,8 @@ function newCharacter(req, res) {
 function create(req, res) {
 	// console.log('please freaking work')
 	// console.log("FORM DATA:", req.body)
-	req.body.owner = req.user.profile._id
 	req.body.deathStatus = !!req.body.deathStatus
+	// req.body.owner = req.user.profile._id
 	for (let key in req.body) {
 		if(req.body[key] === '') delete req.body[key]
 	}
@@ -44,7 +44,7 @@ function create(req, res) {
 
 function show(req, res) {
 	// console.log(req.params.character)
-	req.body.owner = req.user.profile._id
+	// req.body.owner = req.user.profile._id
 	Character.findById(req.params.id)
 	.then(character => {
 		// console.log(character)

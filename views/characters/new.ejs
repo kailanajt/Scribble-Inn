@@ -17,7 +17,7 @@
       <label for="book-origin-input">Book Origin:</label>
       <input type="text" name="bookOrigin" id="book-origin-input">
       <label for="death-status-checkbox">Deceased:</label>
-      <input type="checkbox" name="deathStatus" id="death-status-input" unchecked>
+      <input type="checkbox" name="deathStatus" id="death-status-input" autocomplete="off">
       <br>
       <label for="height-input">Height:</label>
       <input type="text" name="height" id="height-input">
@@ -46,7 +46,6 @@
       <option value="Red">Red</option>
       <option value="Green">Green</option>
       <option value="Purple">Purple</option>
-      
     </select>
     <label for="hair-length-input">Hair Length:</label>
     <select name="hairLength" id="hair-length-select">
@@ -69,7 +68,7 @@
     </select>
 <br>
     <label for="to-note-input">Quick Note:</label>
-      <input type="text" name="toNote" id="to-note-input">
+      <textarea type="text" name="toNote" id="to-note-input"></textarea>
     <% } %>
     <button type="submit">+ Character</button>
   </form>

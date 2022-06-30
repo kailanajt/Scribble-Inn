@@ -1,0 +1,41 @@
+<%- include('../partials/html-head.ejs') %>
+<!-- <link rel="stylesheet" href="/stylesheets/characters/new.css" /> -->
+<%- include('../partials/nav.ejs') %>
+<main>
+    <form id="new-form" action="/books" method="POST">
+        <label for="title-input">Title:</label>
+        <input type="text" name="title" id="title-input">
+        <label for="author-input">Author:</label>
+        <input type="text" name="author" id="author-input">
+        <label for="genre-input">Genre(s):</label>
+        <select name="genre" id="genre-select">
+            <option value="Horror">Horror</option>
+            <option value="Post-Apocalyptic">Post-Apocalyptic</option>
+            <option value="Suspence">Suspence</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Strawberry">Strawberry</option>
+            <option value="Romance">Romance</option>
+            <option value="Young-Adult">Young Adult</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Satire">Satire</option>
+            <option value="Mystery">Mystery</option>
+            <option value="Supernatural">Supernatural</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="High-Fantasy">High-Fantasy</option>
+            <option value="LGBTQ+">LGBTQ+</option>
+            <option value="Dystopia">Dystopia</option>
+            <option value="What-your-heart-desires">What your heart desires</option>
+            <option value="Fantasy">Fantasy</option>
+          </select>
+          <label for="featured-characters-input">Featured Characters:</label>
+          <input type="text" name="featuredCharacters" id="featured-characters-input">
+        <label for="death-status-checkbox">Completed:</label>
+        <input type="checkbox" name="completed" id="completed-input" autocomplete="off">
+        <label for="summary-input">Summary:</label>
+        <textarea type="text" name="summary" id="summary-input"></textarea>
+
+        <button type="submit">+ Book</button>
+        </form>
+</main>
+
+<%- include('../partials/footer.ejs') %>
