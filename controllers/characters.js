@@ -2,6 +2,7 @@ import { Character } from '../models/character.js'
 // import { Profile } from '../models/profile.js'
 
 function index (req, res) {
+	req.body.owner = req.user.profile._id
 	Character.find({})
 	.then(characters => {
 		// console.log('characters')
@@ -17,6 +18,7 @@ function index (req, res) {
 }
 
 function newCharacter(req, res) {
+	req.body.owner = req.user.profile._id
 	// console.log('please freaking work')
 	res.render("characters/new", {
 		title: 'Add Character',
@@ -27,7 +29,7 @@ function create(req, res) {
 	// console.log('please freaking work')
 	// console.log("FORM DATA:", req.body)
 	req.body.deathStatus = !!req.body.deathStatus
-	// req.body.owner = req.user.profile._id
+	req.body.owner = req.user.profile._id
 	for (let key in req.body) {
 		if(req.body[key] === '') delete req.body[key]
 	}
@@ -43,6 +45,7 @@ function create(req, res) {
 }
 
 function show(req, res) {
+	req.body.owner = req.user.profile._id
 	// console.log(req.params.character)
 	// req.body.owner = req.user.profile._id
 	Character.findById(req.params.id)
@@ -60,6 +63,7 @@ function show(req, res) {
 }
 	
 function deleteCharacter(req, res) {
+	req.body.owner = req.user.profile._id
 	// console.log('pls delete')
 	Character.findByIdAndDelete(req.params.id)
 	.then(() => {
@@ -72,6 +76,7 @@ function deleteCharacter(req, res) {
 }
 
 function edit (req, res) {
+	req.body.owner = req.user.profile._id
 	// console.log('pls work pls')
 	Character.findById(req.params.id)
 	.then(character => {
@@ -91,6 +96,7 @@ function update (req, res) {
 	// console.log('REQ.PARAMS', req.params)
 	// console.log('REQ.BODY', req.body)
 	req.body.deathStatus = !!req.body.deathStatus
+	req.body.owner = req.user.profile._id
 	for (let key in req.body) {
 		if(req.body[key] === '') delete req.body[key]
 	}

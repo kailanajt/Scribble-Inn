@@ -42,20 +42,26 @@ nav {
   text-decoration: none;
 }
 
-#homeBtn {
-  padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit; 
-  background-color: transparent;;
+nav > a:visited {
+  color: #84a59d;
 }
 
-#login {
-  border-radius: 50%;
+nav > a:hover {
+  color: white;
+  background-color: ;
 }
 
-#logout {
-  border-radius: 50%;
+nav > a.active {
+  color: white;
+}
+
+
+form > button {
+  width: 100px;
+  margin-left: auto;
+  font-size: 15px;
+  background-color: mintcream;
+  display: right;
 }
 
 main {
@@ -72,9 +78,43 @@ h1 {
 }
 
 label {
-  color: #fbc4ab
+  color: #fbc4ab;
+  font-size: 30px;
 }
 
+input {
+  margin: 35px;
+}
 
+form {
+  background-color: mintcream;
+  margin: 20px;
+  
+}
+
+table {
+  justify-content: center;
+  border: 2px solid #424748;
+  background-color: mintcream;
+}
+
+table thead {
+  font-size: 25px;
+}
+
+thead {
+  margin: 40px;
+}
+
+table td {
+  padding: 10px;
+  background-color: mintcream;
+  text-align: center;
+  font-size: 20px;
+}
+
+#deleteBtn {
+  background-color: #84a59d;
+}
 
 
