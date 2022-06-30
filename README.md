@@ -1,7 +1,7 @@
 <strong>App Title:</strong> Scribble-Inn: Where Ideas Stay.<br>
 <strong>App background:</strong> Inspired by my passion for creating vast worlds and precarious scenarios, I have created an app that will log basic instructions/details about specific characters and their respective books. When you don't have time, scribble it in!<br>
 <strong><a href="https://trello.com/b/xGBolqt7/scribble-inn">Trello Link</a></strong><br>
-<strong><a href=" https://scribble-inn.herokuapp.com/">The Scribble Inn</a></strong>
+<strong><a href="https://scribble-inn.herokuapp.com/">The Scribble Inn</a></strong>
 <strong>Technologies Used:</strong> 
 <ul>
 <li>Youtube - Ben Manley</li>
