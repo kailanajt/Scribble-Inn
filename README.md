@@ -19,5 +19,8 @@
 <li>Sort Characters based on the books they belong to</li>
 <li>Add to or more characters at a time</li>
 <li>Add 'Other Beings' form for inhuman characters</li>
+<li>Collaborative Features</li>
+<li>Upload stories/content straight onto site</li>
+<li>Allow visitors to visit said site</li>
 </ul>
 
