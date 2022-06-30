@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz');
+
 html {
   box-sizing: border-box;
 }
 
 /* The Universal Selector */
 *, /* All elements*/
+
 *::before, /* All ::before pseudo-elements */
 *::after {
   /* All ::after pseudo-elements */
@@ -16,19 +19,43 @@ html {
   font-size: 62.5%;
 }
 
+/* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif; */
 body {
-  background-color: gray;
-  /* Use a system font, if none are available use an available sans-sarif font */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-family: 'Yanone Kaffeesatz';
+  background-color: #84a59d;
   margin: 0;
 }
 
 nav {
-  background-color: white;
+  background-color: #f5cac3;
   font-size: 1.6rem;
   display: flex;
   justify-content: center;
+}
+
+.nav-link {
+  font-size: 20px;
+  color: #84a59d;
+  margin: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+#homeBtn {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit; 
+  background-color: transparent;;
+}
+
+#login {
+  border-radius: 50%;
+}
+
+#logout {
+  border-radius: 50%;
 }
 
 main {
@@ -40,4 +67,14 @@ main {
 
 h1 {
   font-size: 3.6rem;
+  color: #fbc4ab;
+  text-align: center;
 }
+
+label {
+  color: #fbc4ab
+}
+
+
+
+

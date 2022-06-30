@@ -22,7 +22,7 @@
 		</tbody>
 	</table>
 	<section>
-		<h1><%= book.title %>'s Summary</h1>
+		<h1> About "<%= book.title %>"</h1>
 		<table>
 			<thead>
 				<tr>
@@ -36,9 +36,6 @@
 		</tbody>
 	</table>
 
-	<a href="/books/<%= book._id %>/edit ">
-	<button>Edit Book</button>
-	</a>
 
 	<form action="/books/<%= book._id %>?_method=DELETE"
 	method="POST">

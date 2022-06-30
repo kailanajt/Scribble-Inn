@@ -56,10 +56,23 @@ function show (req, res) {
 	})
 }
 
+function deleteBook (req, res) {
+	// console.log('pls delet sir')
+	Book.findByIdAndDelete(req.params.id)
+	.then(() => {
+		res.redirect("/books")
+	})
+	.catch(err => {
+		console.log(err)
+		res.redirect("/")
+	})
+}
+
 
 export {
 	newBook as new,
 	create,
 	index,
 	show,
+	deleteBook as delete,
 }

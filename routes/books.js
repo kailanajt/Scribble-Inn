@@ -16,6 +16,9 @@ router.get('/:id', isLoggedIn, booksCtrl.show)
 //POSt localhost:3000/books
 router.post('/', isLoggedIn, booksCtrl.create)
 
+//DELETE localhost:3000/books/:id
+router.delete('/:id', isLoggedIn, booksCtrl.delete)
+
 
 export {
 	router

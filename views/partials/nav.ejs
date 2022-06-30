@@ -5,45 +5,44 @@
 </head>
 <body>
   <nav>
-    <a href="/">
-      <button>🏠</button>
-    </a>
-    <a 
+    <a class="nav-link nav-char"
     href="/characters" <%- title === 'Your Characters' ? 'class="active"' : '' %>
   >
     Your Characters
   </a>
 
-    <a 
+    <a class="nav-link nav-char"
       href="/characters/new" <%- title === 'Add Character' ? 'class="active"' : '' %>
     >
       + Character
     </a>
 
- 
-    
-    <% if (user) { %>
-      <a href="/auth/logout">
-        <button type="submit">Logout</button>
-      </a>
-    <% } else { %>
-      <a href="/auth/google" class="siwg-link">
-        <button type="submit" class="siwg">
-          <img id="siwg-image" alt="Sign in with Google" />
-        </button>
-      </a>
-    <% } %>
+    <a class="nav-link nav-book"
+    href="/books/new" <%- title === 'Add Book' ? 'class="active"' : '' %>
+  >
+    + Book
+  </a>
 
-    <a 
+    <a class="nav-link nav-book"
     href="/books" <%- title === 'Your Books' ? 'class="active"' : '' %>
   >
     Your Books
   </a>
 
-    <a 
-    href="/books/new" <%- title === 'Add Book' ? 'class="active"' : '' %>
-  >
-    + Book
+  <a href="/" id="homeBtn">
+    <button>🏠</button>
   </a>
+  <% if (user) { %>
+    <a href="/auth/logout" id="logout">
+      <button type="submit">Logout</button>
+    </a>
+  <% } else { %>
+    <a href="/auth/google" class="siwg-link" id="login">
+      <button type="submit" class="siwg">
+        <img id="siwg-image" alt="Sign in with Google" />
+      </button>
+    </a>
+  <% } %>
+
     
   </nav>

@@ -3,6 +3,7 @@
 
 <%- include('../partials/nav.ejs') %>
 <main>
+  <h1>Add Book</h1>
     <form id="new-form" action="/books" method="POST">
         <label for="title-input">Title:</label>
         <input type="text" name="title" id="title-input">
@@ -32,9 +33,10 @@
           <input type="text" name="featuredCharacters" id="featured-characters-input">
         <label for="death-status-checkbox">Completed:</label>
         <input type="checkbox" name="completed" id="completed-input" autocomplete="off">
+        <div id="summary">
         <label for="summary-input">Summary:</label>
         <textarea type="text" name="summary" id="summary-input"></textarea>
-
+        </div>
         <button type="submit">+ Book</button>
         </form>
 </main>
