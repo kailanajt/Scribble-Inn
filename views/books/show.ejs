@@ -1,0 +1,51 @@
+<%- include('../partials/html-head.ejs') %>
+<!-- <link rel="stylesheet" href="/stylesheets/characters/new.css" /> -->
+<%- include('../partials/nav.ejs') %>
+<main>
+
+	<h1><%= title %></h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Author</th>
+				<th>Genre</th>
+				<th>Completed</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td><%= book.title %></td>
+				<td><%= book.author %></td>
+				<td><%= book.genre %></td>
+				<td><%= book.completed %></td>
+		</tr>
+		</tbody>
+	</table>
+	<section>
+		<h1><%= book.title %>'s Summary</h1>
+		<table>
+			<thead>
+				<tr>
+					<td><%= book.summary %></td>
+			</thead>
+		<tbody>
+				<tr>
+					</form>
+					</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<a href="/books/<%= book._id %>/edit ">
+	<button>Edit Book</button>
+	</a>
+
+	<form action="/books/<%= book._id %>?_method=DELETE"
+	method="POST">
+	<button type="submit">Delete Book</button>
+	</form>
+
+	</section>
+</main>
+
+<%- include('../partials/footer.ejs') %>

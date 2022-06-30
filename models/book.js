@@ -11,7 +11,7 @@ const bookSchema = new Schema({
     },
     completed: Boolean,
     summary: String,
-    featuredCharacters: [String],
+    
 }, {
     timestamps: true,
 })

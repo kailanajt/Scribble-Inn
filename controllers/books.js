@@ -42,8 +42,24 @@ function index (req, res) {
 })
 }
 
+function show (req, res) {
+	Book.findById(req.params.id)
+	.then(book => {
+		res.render("books/show", {
+			book: book,
+			title: `${book.title}'s Details`
+		})
+	})
+	.catch(err => {
+		console.log(err)
+		res.redirect("/")
+	})
+}
+
+
 export {
 	newBook as new,
 	create,
-	index
+	index,
+	show,
 }
