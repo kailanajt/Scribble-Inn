@@ -3,35 +3,38 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>The Scribble-Inn</h1>
+  <h1>The Scribble-Inn.</h1>
   <% if (user?.profile.avatar) { %>
     <div>
-      <img
+      <!-- <img
         src="<%= user.profile.avatar %>"
         alt="<%= user.profile.name %>"
-      />
+      /> -->
     </div>
   <% } %>
+<h2> Where Ideas Stay.</h2>
 
-  <a 
+
+
+  <a class="nav-link nav-char all-links"
     href="/characters" <%- title === 'Your Characters' ? 'class="active"' : '' %>
   >
     Your Characters
   </a>
 <br>
-  <a 
+  <a  class="nav-link nav-char all-links"
     href="/books" <%- title === 'Your Books' ? 'class="active"' : '' %>
   >
     Your Books
   </a>
 
-  <a class="nav-link nav-char"
+  <a class="nav-link nav-char all-links"
   href="/characters/new" <%- title === 'Add Character' ? 'class="active"' : '' %>
 >
   + Character
 </a>
 
-<a class="nav-link nav-book"
+<a class="nav-link nav-book all-links"
 href="/books/new" <%- title === 'Add Book' ? 'class="active"' : '' %>
 >
 + Book

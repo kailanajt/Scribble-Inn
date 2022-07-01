@@ -42,16 +42,19 @@ nav {
   text-decoration: none;
 }
 
-nav > a:visited {
+nav,
+.all-links> a:visited {
   color: #84a59d;
 }
 
-nav > a:hover {
+nav,
+.all-links > a:hover {
   color: white;
   background-color: ;
 }
 
-nav > a.active {
+nav,
+.all-links > a.active {
   color: white;
 }
 
@@ -72,10 +75,14 @@ main {
   flex-direction: column;
 }
 
-h1 {
+h1, h2{
   font-size: 3.6rem;
   color: #fbc4ab;
   text-align: center;
+}
+
+h1 {
+  font-size: 100px;
 }
 
 label {

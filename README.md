@@ -1,5 +1,6 @@
-<img src="./assets/scribbline-inn.png">
-<img src="./assets/the-scribble-inn.png">
+<img src="./images/assets/scribble-inn.png">
+<img src="./images/assets/the-scribble-inn.png">
+
 
 <h1> Scribble-Inn: Where Ideas Stay.</h1>
 <h2>App background</h2>
@@ -7,8 +8,8 @@
 <br>
 
 <h2>Getting Started</h2>
-<p><a href="https://trello.com/b/xGBolqt7/scribble-inn">Trello Link</a><br>
-<a href="https://scribble-inn.herokuapp.com/">The Scribble Inn</a></p>
+<p><a href="https://trello.com/b/xGBolqt7/scribble-inn"> Click here for Trello Planning</a><br>
+<a href="https://scribble-inn.herokuapp.com/"> Click here for The Scribble Inn</a></p>
 <br>
 
 <h2>Technologies Used</h2>

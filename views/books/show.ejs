@@ -2,7 +2,6 @@
 <!-- <link rel="stylesheet" href="/stylesheets/characters/new.css" /> -->
 <%- include('../partials/nav.ejs') %>
 <main>
-
 	<h1><%= title %></h1>
 	<table>
 		<thead>
@@ -38,10 +37,8 @@
 
 
 	<form action="/books/<%= book._id %>?_method=DELETE"
-	method="POST">
-	<button type="submit">Delete Book</button>
-	</form>
-
+		method="POST" id="deleteBtn">
+		<button type="submit">Delete Book</button>
 	</section>
 </main>
 

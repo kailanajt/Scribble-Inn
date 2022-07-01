@@ -1,4 +1,5 @@
 import { Book } from '../models/book.js'
+// import { Character } from '../models/character.js'
 
 
 
@@ -57,10 +58,16 @@ function show (req, res) {
 }
 
 function deleteBook (req, res) {
-	// console.log('pls delet sir')
-	Book.findByIdAndDelete(req.params.id)
-	.then(() => {
-		res.redirect("/books")
+	Book.findById(req.params.id)
+	.then(book => {
+		if (book.owner.equals(req.user.profile._id)) {
+			book.delete()
+			.then(() => {
+				res.redirect('/books')
+			})
+		} else {
+			throw new Error ('NOT AUTHORIZED')
+		}
 	})
 	.catch(err => {
 		console.log(err)

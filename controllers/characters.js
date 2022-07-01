@@ -45,7 +45,7 @@ function create(req, res) {
 }
 
 function show(req, res) {
-	req.body.owner = req.user.profile._id
+	// req.body.owner = req.user.profile._id
 	// console.log(req.params.character)
 	// req.body.owner = req.user.profile._id
 	Character.findById(req.params.id)
@@ -63,37 +63,60 @@ function show(req, res) {
 }
 	
 function deleteCharacter(req, res) {
-	req.body.owner = req.user.profile._id
-	// console.log('pls delete')
-	Character.findByIdAndDelete(req.params.id)
-	.then(() => {
-		res.redirect("/characters")
+	Character.findById(req.params.id)
+	.then(character => {
+		if (character.owner.equals(req.user.profile._id)) {
+			character.delete()
+			.then(() => {
+				res.redirect('/characters')
+			})
+		} else {
+		throw new Error ('NOT AUTHORIZED')
+		}
 	})
 	.catch(err => {
-		console.log(err)
-		res.redirect("/")
-	})
+        console.log(err)
+        res.redirect("/")
+    })
 }
 
 function edit (req, res) {
-	req.body.owner = req.user.profile._id
-	// console.log('pls work pls')
-	Character.findById(req.params.id)
-	.then(character => {
-		res.render('characters/edit', {
-			character: character,
-			title: "Edit Character"
-		})
-	})
-	.catch(err => {
-		console.log(err)
-		res.redirect("/")
-	})
+    req.body.owner = req.user.profile._id
+    // console.log('pls work pls')
+    Character.findById(req.params.id)
+    .then(character => {
+        res.render('characters/edit', {
+            character: character,
+            title: "Edit Character"
+        })
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect("/")
+    })
 }
 
+
 function update (req, res) {
-	console.log('pls work')
+	Character.findById(req.params.id)
+	.then(character => {
+		if (character.owner.equals(req.user.profile._id)) {
+			req.body.deathStatus = !!req.body.deathStatus
+			character.updateOne(req.body, {new: true})
+			.then(updatedCharacter => {
+				res.redirect(`/characters/${character._id}`)
+			})
+		} else {
+		throw new Error ('NOT AUTHORIZED')
+		}
+	})
+	.catch(err => {
+        console.log(err)
+        res.redirect("/")
+    })
 }
+
+
 export {
 	index,
 	newCharacter as new,

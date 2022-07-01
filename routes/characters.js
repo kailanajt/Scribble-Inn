@@ -22,7 +22,7 @@ router.post('/', isLoggedIn, charactersCtrl.create)
 // DELETE localhost:3000/characters/:id
 router.delete("/:id", isLoggedIn, charactersCtrl.delete)
 
-//PUT localhost:3000/movies/:id
+//PUT localhost:3000/characters/:id
 router.put("/:id", isLoggedIn, charactersCtrl.update)
 
 
