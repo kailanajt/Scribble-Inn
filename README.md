@@ -1,3 +1,6 @@
+<img src="./assets/scribbline-inn.png">
+<img src="./assets/the-scribble-inn.png">
+
 <h1> Scribble-Inn: Where Ideas Stay.</h1>
 <h2>App background</h2>
 <p>Inspired by my passion for creating vast worlds and precarious scenarios, I have created an app that will log basic instructions/details about specific characters and their respective books. When you don't have time, scribble it in!</p>
