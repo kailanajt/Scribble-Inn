@@ -5,7 +5,7 @@ function index (req, res) {
 	req.body.owner = req.user.profile._id
 	Character.find({})
 	.then(characters => {
-		// console.log('characters')
+	// console.log('characters')
 		res.render('characters/index', {
 			characters, //characters: characters,
 			title: "Your Characters",
@@ -74,10 +74,10 @@ function deleteCharacter(req, res) {
 		throw new Error ('NOT AUTHORIZED')
 		}
 	})
-	.catch(err => {
-        console.log(err)
-        res.redirect("/")
-    })
+		.catch(err => {
+    	 console.log(err)
+    		res.redirect("/")
+  })
 }
 
 function edit (req, res) {
@@ -93,7 +93,7 @@ function edit (req, res) {
     .catch(err => {
         console.log(err)
         res.redirect("/")
-    })
+  })
 }
 
 

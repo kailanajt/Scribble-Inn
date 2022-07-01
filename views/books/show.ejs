@@ -4,42 +4,42 @@
 <main>
 	<h1><%= title %></h1>
 	<table>
-		<thead>
-			<tr>
-				<th>Title</th>
-				<th>Author</th>
-				<th>Genre</th>
-				<th>Completed</th>
-		</thead>
-		<tbody>
-			<tr>
-				<td><%= book.title %></td>
-				<td><%= book.author %></td>
-				<td><%= book.genre %></td>
-				<td><%= book.completed %></td>
-		</tr>
-		</tbody>
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Genre</th>
+			<th>Completed</th>
+	</thead>
+	<tbody>
+		<tr>
+			<td><%= book.title %></td>
+			<td><%= book.author %></td>
+			<td><%= book.genre %></td>
+			<td><%= book.completed %></td>
+	</tr>
+	</tbody>
 	</table>
 	<section>
 		<h1> About "<%= book.title %>"</h1>
 		<table>
-			<thead>
-				<tr>
-					<td><%= book.summary %></td>
-			</thead>
+		<thead>
+			<tr>
+				<td><%= book.summary %></td>
+		</thead>
 		<tbody>
-				<tr>
-					</form>
-					</td>
-			</tr>
-		</tbody>
-	</table>
+			<tr>
+				</form>
+				</td>
+		</tr>
+	</tbody>
+</table>
 
 
-	<form action="/books/<%= book._id %>?_method=DELETE"
-		method="POST" id="deleteBtn">
-		<button type="submit">Delete Book</button>
-	</section>
+<form action="/books/<%= book._id %>?_method=DELETE"
+	method="POST" id="deleteBtn">
+	<button type="submit">Delete Book</button>
+</section>
 </main>
 
 <%- include('../partials/footer.ejs') %>

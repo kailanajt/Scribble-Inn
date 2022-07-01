@@ -33,9 +33,9 @@ skinColor: {
 toNote: {
 	type: String
 },
-owner: {type: Schema.Types.ObjectId, ref: 'Profile'},
+	owner: {type: Schema.Types.ObjectId, ref: 'Profile'},
 }, {
-	timestamps: true
+timestamps: true
 })
 
 const Character = mongoose.model('Character', characterSchema)

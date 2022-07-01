@@ -3,25 +3,25 @@
 <%- include('../partials/nav.ejs') %>
 <section> 
 <h1>Your Books</h1>
-		<table>
-			<thead>
+	<table>
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Genre</th>
+				<th>Complete</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% books.forEach(book => { %>
 				<tr>
-					<th>Title</th>
-					<th>Genre</th>
-					<th>Complete</th>
+					<td> 📖 <%=  book.title %></td>
+					<td><%= book.genre %></td>
+					<td><%= book.completed %></td>
+					<td><a href="/books/<%=book._id %>">Details</a></td>
 				</tr>
-			</thead>
-			<tbody>
-				<% books.forEach(book => { %>
-					<tr>
-						<td> 📖 <%=  book.title %></td>
-						<td><%= book.genre %></td>
-						<td><%= book.completed %></td>
-						<td><a href="/books/<%=book._id %>">Details</a></td>
-					</tr>
-					<% }) %>
-				</tbody>
-			</table>
-		</section>
-		
+				<% }) %>
+			</tbody>
+		</table>
+	</section>
+	
 		<%- include('../partials/footer.ejs') %>
