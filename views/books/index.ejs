@@ -3,9 +3,6 @@
 <%- include('../partials/nav.ejs') %>
 <section> 
 <h1>Your Books</h1>
-
-<% if (books.length) { %>
-	<% books.forEach(book => { %>
 		<table>
 			<thead>
 				<tr>
@@ -25,10 +22,6 @@
 					<% }) %>
 				</tbody>
 			</table>
-			<% }) %>
-			<% } else {  %>
-			  <h2>There are no books yet</h2>
-			<% } %>
 		</section>
 		
 		<%- include('../partials/footer.ejs') %>
