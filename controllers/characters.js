@@ -92,23 +92,7 @@ function edit (req, res) {
 }
 
 function update (req, res) {
-	// console.log('pls work pls')
-	// console.log('REQ.PARAMS', req.params)
-	// console.log('REQ.BODY', req.body)
-	req.body.deathStatus = !!req.body.deathStatus
-	req.body.owner = req.user.profile._id
-	for (let key in req.body) {
-		if(req.body[key] === '') delete req.body[key]
-	}
-	Character.findByIdAndUpdate(req.params.id, req.body, {new: true})
-	.then(character => {
-		// console.log(character)
-		res.redirect(`/characters/${character._id}`)
-	})
-	.catch(err => {
-		console.log(err)
-		res.redirect("/")
-	})
+	console.log('pls work')
 }
 export {
 	index,

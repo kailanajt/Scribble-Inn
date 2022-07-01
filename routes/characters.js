@@ -5,13 +5,13 @@ import { isLoggedIn } from '../middleware/middleware.js'
 const router = Router()
 
 //GET localhost:3000/characters
-router.get('/', isLoggedIn, charactersCtrl.index)
+router.get('/', charactersCtrl.index)
 
 // GET localhost:3000/characters/new
 router.get('/new', isLoggedIn, charactersCtrl.new)
 
 //GET localhost:3000/characters/:id
-router.get('/:id', isLoggedIn, charactersCtrl.show)
+router.get('/:id', charactersCtrl.show)
 
 // GET localhost:3000/characters/:id/edit
 router.get('/:id/edit', isLoggedIn, charactersCtrl.edit)
