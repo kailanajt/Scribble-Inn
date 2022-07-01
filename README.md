@@ -1,6 +1,6 @@
 <img src="./images/assets/scribble-inn.png">
 <img src="./images/assets/the-scribble-inn.png">
-
+![Scribble in home](https://scribble-inn.herokuapp.com/public/../../../public/images/assets/tsi-home.pngimages/assets/tsi-home.png)
 
 <h1> Scribble-Inn: Where Ideas Stay.</h1>
 <h2>App background</h2>
